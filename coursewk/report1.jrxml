@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1030" pageHeight="849" columnWidth="990" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="215482b5-8868-4490-865a-bf333055d5f0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from issuedetails,returndetails where issuedetails.issueid=returndetails.returnid;]]>
+	</queryString>
+	<field name="issueid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="readerid" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="readername" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="book_isbn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bookname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="issuedate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="issuereturndate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="returnid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="todaydate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dayselap" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fine" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="readerid">
+		<groupExpression><![CDATA[$F{readerid}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#006600" uuid="d6facd30-5d7d-480d-9ad9-af46a78e613f"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{readerid}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="6bc6b1c2-dd66-4eb7-a653-ada39fba5f06"/>
+				</rectangle>
+				<image>
+					<reportElement x="555" y="33" width="5957" height="3493" uuid="8aae4ef4-1c74-416c-93f8-d35d536c2349"/>
+					<imageExpression><![CDATA["E:\\software engineer\\4th term\\3enterprise application development\\exercise\\coursewk\\images\\hySrQhk9QgN45B-0z8PR0bd8ZRyDZ9LnvzPSGaIb91Q (1).jpg"]]></imageExpression>
+				</image>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="23"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="191" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="236" y="0" width="236" height="33" uuid="c9f1335a-f591-4d07-86ff-beed8d18e037"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Library Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="3" y="47" width="271" height="22" uuid="c08da23c-1082-4116-88df-482581ecb004"/>
+				<text><![CDATA[Book Issue And Return Details ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="476" y="11" width="499" height="165" uuid="827c6c9c-036b-4e5a-a54e-ec6ffb01a9fe"/>
+				<imageExpression><![CDATA["E:\\software engineer\\4th term\\3enterprise application development\\exercise\\coursewk\\images\\images.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="51" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="59c6db58-88da-4b81-b79e-b0c2d3e7c49c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="3" y="19" width="60" height="15" uuid="bddb7432-865a-43a4-a668-5e1c00ffe86b"/>
+				<text><![CDATA[issueid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="84" y="19" width="83" height="15" uuid="bde9d355-6210-45e7-aa56-9cb4aea6b40e"/>
+				<text><![CDATA[readername]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="186" y="19" width="64" height="15" uuid="e861e84c-5699-4cde-84dd-4cc267160080"/>
+				<text><![CDATA[book_isbn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="274" y="19" width="76" height="15" uuid="2881e9f5-2926-4fdb-9b24-e9297401c882"/>
+				<text><![CDATA[bookname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="374" y="19" width="76" height="15" uuid="d65b35bc-60ed-499e-9b92-30e277d33e40"/>
+				<text><![CDATA[issuedate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="465" y="19" width="109" height="15" uuid="8c3b6c0d-49fe-4c86-8819-fa91637a7210"/>
+				<text><![CDATA[issuereturndate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="588" y="19" width="72" height="15" uuid="45d54422-57a3-4e40-9253-f109b432568f"/>
+				<text><![CDATA[returnid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="680" y="19" width="74" height="15" uuid="68e69885-5abf-438b-b0d7-9e6fe57fe170"/>
+				<text><![CDATA[todaydate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="772" y="19" width="72" height="15" uuid="3d63e3c0-c357-42fa-a0ad-1bcd34dc9707"/>
+				<text><![CDATA[dayselap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="865" y="19" width="48" height="15" uuid="80b56a91-170d-426a-b865-ccbcdd187250"/>
+				<text><![CDATA[fine]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="925" y="19" width="54" height="15" uuid="c88d05b5-bad4-4c39-a59c-620b26b7717d"/>
+				<text><![CDATA[status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="6899a464-9de0-4525-b40b-d2c5f375efe4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="50" height="15" uuid="1fb7f55d-9a0b-4a8a-8c4c-53f9b7747f45"/>
+				<textFieldExpression><![CDATA[$F{issueid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="186" y="0" width="50" height="15" uuid="a3853d7e-6119-479c-8086-213785769700"/>
+				<textFieldExpression><![CDATA[$F{book_isbn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="274" y="0" width="50" height="15" uuid="409752a6-c936-4d2e-b75e-e974dc8f682b"/>
+				<textFieldExpression><![CDATA[$F{bookname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="588" y="1" width="50" height="15" uuid="7bcbf0c6-2cf8-400a-86e9-b71127f8e84e"/>
+				<textFieldExpression><![CDATA[$F{returnid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="680" y="1" width="50" height="15" uuid="ebbaa8f6-f696-482b-9bd3-41c58b72f6ea"/>
+				<textFieldExpression><![CDATA[$F{todaydate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="772" y="1" width="50" height="15" uuid="398aedaa-8928-4b14-9d34-aded86a5ec3b"/>
+				<textFieldExpression><![CDATA[$F{dayselap}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="863" y="0" width="50" height="15" uuid="cc2aba34-f8d5-4bd0-bdbb-0c9014f8f6bb"/>
+				<textFieldExpression><![CDATA[$F{fine}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="925" y="0" width="50" height="15" uuid="f94be0cf-df9c-4166-9dbd-4381439daaf7"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="84" y="0" width="50" height="15" uuid="92f0df41-bf2d-42a6-bf79-8691735bda6b"/>
+				<textFieldExpression><![CDATA[$F{readername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="374" y="1" width="50" height="15" uuid="edf4280c-a741-4918-a7a5-916a4e64436a"/>
+				<textFieldExpression><![CDATA[$F{issuedate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="465" y="1" width="50" height="15" uuid="68b31f49-5b44-44bf-a9c0-045b5aa575d8"/>
+				<textFieldExpression><![CDATA[$F{issuereturndate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="52" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="a55238ec-fc0c-4c47-b8c8-a6474f87c1c5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="86" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="62279341-e417-4238-adc6-e3d83b259226"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="8cb4ffc3-e4c5-402e-9abd-443586ef106d"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="a7cb242f-9eed-4d4b-bea4-d53a360c5c1d"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

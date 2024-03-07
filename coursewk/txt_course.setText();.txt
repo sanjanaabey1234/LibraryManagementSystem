@@ -1,0 +1,6 @@
+txt_course.setText("");
+        txt_tel.setText("");
+        txt_email.setText("");
+        txt_name.setText("");
+        txt_address.setText("");
+        jDateChooser_dob.setCalendar(null);
